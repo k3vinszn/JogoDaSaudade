@@ -5,9 +5,8 @@ using UnityEngine;
 public class Peixe : MonoBehaviour
 {
     [SerializeField] GameObject[] peixePrefab;
-
-    [SerializeField] float secondSpawn = 0.5f;[SerializeField] float minTras;
-
+    [SerializeField] float secondSpawn = 0.5f;
+    [SerializeField] float minTras;
     [SerializeField] float maxTras;
 
     void Start()
@@ -20,7 +19,7 @@ public class Peixe : MonoBehaviour
         while (true)
         {
             var wanted = Random.Range(minTras, maxTras);
-            var position = new Vector3(wanted, transform.position.y);
+            var position = new Vector3(-wanted, transform.position.y); // Update X-coordinate here
             GameObject gameObject = Instantiate(peixePrefab[Random.Range(0, peixePrefab.Length)]);
             gameObject.transform.position = position;
             yield return new WaitForSeconds(secondSpawn);
