@@ -5,6 +5,8 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject objectPrefab;
     public float moveSpeed = 5f;
     public float spawnInterval = 3f;
+    public float minYPosition = -2f; // Minimum Y position
+    public float maxYPosition = 2f;  // Maximum Y position
 
     void Start()
     {
@@ -14,8 +16,12 @@ public class ObjectSpawner : MonoBehaviour
 
     void SpawnObject()
     {
-        // Instantiate the object and set its initial position
-        GameObject newObject = Instantiate(objectPrefab, transform.position, Quaternion.identity);
+        // Random Y spawn
+        float randomYPosition = Random.Range(minYPosition, maxYPosition);
+
+        // Instantiate the object with the random Y position
+        Vector3 spawnPosition = new Vector3(transform.position.x, randomYPosition, 0f);
+        GameObject newObject = Instantiate(objectPrefab, spawnPosition, Quaternion.identity);
 
         // Get the object's rigidbody component to control its movement
         Rigidbody2D rb = newObject.GetComponent<Rigidbody2D>();
@@ -27,3 +33,4 @@ public class ObjectSpawner : MonoBehaviour
         rb.velocity = new Vector2(-moveSpeed, 0f);
     }
 }
+
