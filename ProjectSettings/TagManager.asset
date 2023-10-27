@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - PullableObject
+  - Fish
+  - PullingObject
   layers:
   - Default
   - TransparentFX
