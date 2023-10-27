@@ -177,7 +177,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: -7443756053782179069, guid: 89d415afaa36bcc44b82b473e3892b82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -398,6 +398,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &885902460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 885902462}
+  - component: {fileID: 885902461}
+  m_Layer: 0
+  m_Name: SPAWNER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &885902461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885902460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fda63cabbc522c4c944a9cec8dfd63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 3980352173819077864, guid: 171bfc53f77b3cc4d8d3040f1c4040c9, type: 3}
+  spawnInterval: 2
+  moveSpeed: 5
+--- !u!4 &885902462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885902460}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.98, y: 0.21, z: 0.018183041}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1216479239
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,26 +597,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1693587121}
-  - component: {fileID: 1693587120}
   m_Layer: 0
   m_Name: peixe
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1693587120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693587119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43b695771dc3a7745b903abc043b4d57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_IsActive: 0
 --- !u!4 &1693587121
 Transform:
   m_ObjectHideFlags: 0
@@ -597,25 +631,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestFish
       objectReference: {fileID: 0}
-    - target: {fileID: 5534660616566727309, guid: 171bfc53f77b3cc4d8d3040f1c4040c9, type: 3}
-      propertyPath: m_Constraints
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534660616566727309, guid: 171bfc53f77b3cc4d8d3040f1c4040c9, type: 3}
-      propertyPath: m_GravityScale
+    - target: {fileID: 3980352173819077864, guid: 171bfc53f77b3cc4d8d3040f1c4040c9, type: 3}
+      propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548003640087064423, guid: 171bfc53f77b3cc4d8d3040f1c4040c9, type: 3}
-      propertyPath: maxYPosition
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548003640087064423, guid: 171bfc53f77b3cc4d8d3040f1c4040c9, type: 3}
-      propertyPath: objectPrefab
-      value: 
-      objectReference: {fileID: 3980352173819077864, guid: 171bfc53f77b3cc4d8d3040f1c4040c9, type: 3}
-    - target: {fileID: 5548003640087064423, guid: 171bfc53f77b3cc4d8d3040f1c4040c9, type: 3}
-      propertyPath: spawnInterval
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6810822010268497412, guid: 171bfc53f77b3cc4d8d3040f1c4040c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -672,3 +690,4 @@ SceneRoots:
   - {fileID: 1216479242}
   - {fileID: 8333491836947394764}
   - {fileID: 414479924}
+  - {fileID: 885902462}
