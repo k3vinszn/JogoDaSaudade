@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b1ea6d5c23bf5c14680b1e05dc3b6964
+guid: 999bb44683b703f44a8e089bddadf799
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3047855723568859553
-    second: anzol_0
+      213: -586991540233238488
+    second: jellyfish_1_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,29 +94,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: anzol_0
+      name: jellyfish_1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 34
-        height: 122
+        width: 190
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a986f1e1a82c4a20800000000000000
-      internalID: 3047855723568859553
+      spriteID: 8280d3edd469ad7f0800000000000000
+      internalID: -586991540233238488
       vertices: []
       indices: 
       edges: []
@@ -140,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      anzol_0: 3047855723568859553
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

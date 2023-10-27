@@ -10,6 +10,8 @@ public class LeftMovingObject : MonoBehaviour
     private Vector2 spawnPosition;
     private float elapsedTime = 0f;
 
+    public bool moveLeft;
+
     void Start()
     {
         // Initialize the object's spawn position randomly between minY and maxY
@@ -20,8 +22,17 @@ public class LeftMovingObject : MonoBehaviour
 
     void Update()
     {
-        // Move the object to the left
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        if (moveLeft)
+        {
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+            transform.localScale =  new Vector3 (-1, 1, 1);
+
+        }
+       
 
         // Increment the elapsed time
         elapsedTime += Time.deltaTime;

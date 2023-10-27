@@ -1,11 +1,9 @@
 using UnityEngine;
 
-public class ObjectSpawner : MonoBehaviour
+public class ObjectSpawnerLeft : MonoBehaviour
 {
     public GameObject[] objectsToSpawn; // Array of GameObject prefabs to be spawned
     public float spawnInterval = 2f;    // Time interval between spawns in seconds
-
-    public bool goLeft;
 
     void Start()
     {
@@ -21,6 +19,9 @@ public class ObjectSpawner : MonoBehaviour
         // Instantiate the randomly selected prefab at the spawner's position with its rotation
         GameObject spawnedObject = Instantiate(objectsToSpawn[randomIndex], transform.position, Quaternion.identity);
 
+        // Flip the object's transform scale along the X-axis to invert its X direction
+        spawnedObject.transform.localScale = new Vector3(-spawnedObject.transform.localScale.x, spawnedObject.transform.localScale.y, spawnedObject.transform.localScale.z);
+
         // Attach the LeftMovingObject script to the spawned object (for automatic left movement)
         LeftMovingObject leftMovement = spawnedObject.GetComponent<LeftMovingObject>();
 
@@ -29,7 +30,6 @@ public class ObjectSpawner : MonoBehaviour
         {
             // Set the move speed for the spawned object (if needed)
             leftMovement.moveSpeed = 5f; // You can adjust the move speed here
-            leftMovement.moveLeft = goLeft;
         }
         else
         {

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1255357108747190960}
   - component: {fileID: 851133590347081380}
   m_Layer: 6
-  m_Name: Hexagon Point Top
+  m_Name: Picatchu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
