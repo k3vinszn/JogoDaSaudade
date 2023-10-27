@@ -224,7 +224,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e43413738046a643a178841293d24a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 4039044907026999256, guid: 31738124be89ad744aa9bc9bcb9623f2, type: 3}
+  objectsToSpawn:
+  - {fileID: 1875468406108383142, guid: 90682cc7be53fab4bae8b382282c0e01, type: 3}
+  - {fileID: 3414114504410940999, guid: 81943402daa901f4692bf8d9741c02ee, type: 3}
+  - {fileID: 4039044907026999256, guid: 31738124be89ad744aa9bc9bcb9623f2, type: 3}
+  - {fileID: 6122076799740650978, guid: bd57de3568de21a4d9d0dfaf8d185b3c, type: 3}
+  - {fileID: 2888018248283694473, guid: b820329903facad4aaac11aba59213bc, type: 3}
+  - {fileID: 214716747953368023, guid: 7021f3422c6517e43a148c5b07f27e36, type: 3}
+  - {fileID: 4560574928061383857, guid: 207d981840084604cbb2392795d1c15d, type: 3}
+  - {fileID: 1333253481546111176, guid: c71f94156ee65d64aa634eb710af21a1, type: 3}
   spawnInterval: 2
 --- !u!4 &809124654
 Transform:

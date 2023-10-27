@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    public GameObject objectToSpawn; // The GameObject prefab to be spawned
-    public float spawnInterval = 2f; // Time interval between spawns in seconds
+    public GameObject[] objectsToSpawn; // Array of GameObject prefabs to be spawned
+    public float spawnInterval = 2f;    // Time interval between spawns in seconds
 
     void Start()
     {
@@ -13,8 +13,11 @@ public class ObjectSpawner : MonoBehaviour
 
     void SpawnObject()
     {
-        // Instantiate the objectToSpawn prefab at the spawner's position with its rotation
-        GameObject spawnedObject = Instantiate(objectToSpawn, transform.position, Quaternion.identity);
+        // Generate a random index to select a prefab from the objectsToSpawn array
+        int randomIndex = Random.Range(0, objectsToSpawn.Length);
+
+        // Instantiate the randomly selected prefab at the spawner's position with its rotation
+        GameObject spawnedObject = Instantiate(objectsToSpawn[randomIndex], transform.position, Quaternion.identity);
 
         // Attach the LeftMovingObject script to the spawned object (for automatic left movement)
         LeftMovingObject leftMovement = spawnedObject.GetComponent<LeftMovingObject>();
