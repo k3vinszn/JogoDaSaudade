@@ -32,4 +32,17 @@ public class LeftMovingObject : MonoBehaviour
        
 
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Check if the colliding object has a specific tag (you can customize the tag as needed).
+        if (collision.gameObject.CompareTag("Bar"))
+        {
+            // Optionally, you can increase the score using the ScoreManager's IncreaseScore function.
+            // scoreManager.IncreaseScore(scorePoints);
+
+            // Destroy the colliding object.
+            Destroy(gameObject);
+        }
+    }
 }

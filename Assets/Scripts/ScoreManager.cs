@@ -1,0 +1,21 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ScoreManager : MonoBehaviour
+{
+    public Text scoreText; // Reference to the UI text displaying the score.
+    private int score = 0; // The current score.
+
+    // Function to increase the score.
+    public void IncreaseScore(int points)
+    {
+        score += points;
+        UpdateScoreUI();
+    }
+
+    // Function to update the score UI text.
+    void UpdateScoreUI()
+    {
+        scoreText.text = "Score: " + score;
+    }
+}
