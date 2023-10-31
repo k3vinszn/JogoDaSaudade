@@ -7,6 +7,7 @@ TagManager:
   - PullableObject
   - Fish
   - PullingObject
+  - scoresystem
   layers:
   - Default
   - TransparentFX
