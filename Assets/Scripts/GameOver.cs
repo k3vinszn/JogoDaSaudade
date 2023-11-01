@@ -12,7 +12,6 @@ public class GameOver : MonoBehaviour
 
     void Start()
     {
-        // Load the score from PlayerPrefs
         int score = PlayerPrefs.GetInt("Score", 0);
         scoreText.text = "Score: " + score;
     }
@@ -21,7 +20,7 @@ public class GameOver : MonoBehaviour
     // Function to handle Play Button click
     public void Retry()
     {
-        SceneManager.LoadScene("SampleScene"); // Replace "GameScene" with your actual game scene name
+        SceneManager.LoadScene("GameScene"); // Replace "GameScene" with your actual game scene name
     }
 
     public void MainMeny()

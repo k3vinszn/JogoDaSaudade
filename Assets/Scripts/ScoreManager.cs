@@ -12,21 +12,16 @@ public class ScoreManager : MonoBehaviour
     {
         score += points;
         UpdateScoreUI();
+        PlayerPrefs.SetInt("Score", score);
+        PlayerPrefs.Save();
     }
 
     // Function to update the score UI text.
     void UpdateScoreUI()
     {
         scoreText.text = "Score: " + score;
-    }
-
-    // Function to handle game over and pass the score to the "Game Over" scene.
-    public void GameOver()
-    {
-        // Save the score to PlayerPrefs
-        PlayerPrefs.SetInt("Score", score);
-        PlayerPrefs.Save();
-
         
     }
+
+
 }

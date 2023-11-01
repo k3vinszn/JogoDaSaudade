@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b85ac73bded77e4986edd9dd97ee564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 180
+  timeLeft: 10
   startText: {fileID: 1791733254}
 --- !u!4 &618466820
 Transform:
