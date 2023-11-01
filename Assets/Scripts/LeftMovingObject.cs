@@ -11,7 +11,6 @@ public class LeftMovingObject : MonoBehaviour
 
     void Start()
     {
-        // Initialize the object's spawn position randomly between minY and maxY
         float randomY = Random.Range(minY, maxY);
         spawnPosition = new Vector2(transform.position.x, randomY);
         transform.position = spawnPosition;
@@ -26,23 +25,22 @@ public class LeftMovingObject : MonoBehaviour
         else
         {
             transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
-            transform.localScale =  new Vector3 (-1, 1, 1);
-
+            transform.localScale = new Vector3(-1, 1, 1);
         }
-       
-
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the colliding object has a specific tag (you can customize the tag as needed).
-        if (collision.gameObject.CompareTag("Bar"))
+        // Check if the trigger object has a specific tag (you can customize the tag as needed).
+        if (other.gameObject.CompareTag("scoresystem"))
         {
-            // Optionally, you can increase the score using the ScoreManager's IncreaseScore function.
-            // scoreManager.IncreaseScore(scorePoints);
+            Vector3 initialPosition = other.transform.position;
 
-            // Destroy the colliding object.
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+
+            other.transform.position = initialPosition;
+            other.transform.SetParent(null);
+            other.gameObject.GetComponent<LeftMovingObject>().moveSpeed = 5f;
         }
     }
 }
