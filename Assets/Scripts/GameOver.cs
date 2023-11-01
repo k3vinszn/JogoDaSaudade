@@ -2,9 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
+
+    public Text scoreText;
+
+
+    void Start()
+    {
+        // Load the score from PlayerPrefs
+        int score = PlayerPrefs.GetInt("Score", 0);
+        scoreText.text = "Score: " + score;
+    }
+
+
     // Function to handle Play Button click
     public void Retry()
     {

@@ -32,18 +32,23 @@ public class ObjectSpawner : MonoBehaviour
     {
         // Get an inactive object from the pool
         GameObject spawnedObject = GetInactiveObject();
+        spawnedObject.transform.SetParent(null);
 
-        // Set the position of the spawned object
         spawnedObject.transform.position = transform.position;
         spawnedObject.SetActive(true);
 
-        // Attach the LeftMovingObject script to the spawned object (for automatic left movement)
+        // Attach the LeftMovingObject script to the spawned object (for automatic movement)
         LeftMovingObject leftMovement = spawnedObject.GetComponent<LeftMovingObject>();
 
         // Check if the spawned object has the LeftMovingObject script
         if (leftMovement != null)
         {
+            // Reset the move speed to its initial value
+            leftMovement.moveSpeed = leftMovement.initialMoveSpeed;
+
+            // Set the move direction
             leftMovement.moveLeft = goLeft;
+            Debug.Log(transform.parent);
         }
         else
         {

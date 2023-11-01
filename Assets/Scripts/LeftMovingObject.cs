@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LeftMovingObject : MonoBehaviour
 {
+    public float initialMoveSpeed = 5f; // Initial speed at which the object moves
     public float moveSpeed = 5f; // Speed at which the object moves to the left
     public float minY = 1.0f;    // Minimum Y position
     public float maxY = 4.0f;    // Maximum Y position
@@ -34,13 +35,10 @@ public class LeftMovingObject : MonoBehaviour
         // Check if the trigger object has a specific tag (you can customize the tag as needed).
         if (other.gameObject.CompareTag("scoresystem"))
         {
-            Vector3 initialPosition = other.transform.position;
 
             gameObject.SetActive(false);
 
-            other.transform.position = initialPosition;
-            other.transform.SetParent(null);
-            other.gameObject.GetComponent<LeftMovingObject>().moveSpeed = 5f;
+           
         }
     }
 }

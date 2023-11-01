@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -17,5 +18,15 @@ public class ScoreManager : MonoBehaviour
     void UpdateScoreUI()
     {
         scoreText.text = "Score: " + score;
+    }
+
+    // Function to handle game over and pass the score to the "Game Over" scene.
+    public void GameOver()
+    {
+        // Save the score to PlayerPrefs
+        PlayerPrefs.SetInt("Score", score);
+        PlayerPrefs.Save();
+
+        
     }
 }

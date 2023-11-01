@@ -29,18 +29,10 @@ public class Anzol : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Fish"))
         {
-            if (counter < 1)
+            if(counter < 1)
             {
-                // Store the initial position of the fish before deactivating it
-                Vector3 initialPosition = collision.transform.position;
-
-                // Deactivate the fish
-                collision.gameObject.SetActive(false);
-
-                // Reset the fish's position and state before reactivating it
-                collision.transform.position = initialPosition;
-                collision.transform.SetParent(null);
-                collision.gameObject.GetComponent<LeftMovingObject>().moveSpeed = 5f; // Set the moveSpeed to the initial value
+                collision.transform.SetParent(transform.Find("AttachmentPoint"));
+                collision.gameObject.GetComponent<LeftMovingObject>().moveSpeed = 0;
                 counter++;
             }
         }
@@ -52,6 +44,9 @@ public class Anzol : MonoBehaviour
             points += counter;
             textScore.text = ("peixes:" + points);
             counter = 0;
+
+            collision.transform.SetParent(null);
+
         }
     }
 }
