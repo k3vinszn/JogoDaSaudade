@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Anzol : MonoBehaviour
@@ -36,8 +37,11 @@ public class Anzol : MonoBehaviour
                 counter++;
             }
         }
-          
-           
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+
 
         if (collision.gameObject.CompareTag("scoresystem"))
         {
@@ -46,6 +50,7 @@ public class Anzol : MonoBehaviour
             counter = 0;
 
             collision.transform.SetParent(null);
+
 
         }
     }
