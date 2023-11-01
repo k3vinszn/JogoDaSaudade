@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
     // Function to handle Play Button click
     public void PlayGame()
     {
-        SceneManager.LoadScene("SampleScene"); // Replace "GameScene" with your actual game scene name
+        SceneManager.LoadScene("GameScene"); // Replace "GameScene" with your actual game scene name
     }
 
     // Function to handle Quit Button click

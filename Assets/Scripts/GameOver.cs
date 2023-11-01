@@ -12,8 +12,7 @@ public class GameOver : MonoBehaviour
 
     void Start()
     {
-        int score = PlayerPrefs.GetInt("Score", 0);
-        scoreText.text = "Score: " + score;
+       
     }
 
 
