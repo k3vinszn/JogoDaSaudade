@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TimerRemain : MonoBehaviour
 {
 
-    public float timeLeft = 150.0f;
+    public float timeLeft = 90.0f;
     public Text startText; //1used for showing countdown from 3, 2, 1 
 
 

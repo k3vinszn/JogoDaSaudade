@@ -46,7 +46,7 @@ public class Anzol : MonoBehaviour
         if (collision.gameObject.CompareTag("scoresystem"))
         {
             points += counter;
-            textScore.text = ("X" + points);
+            textScore.text = ("" + points);
             counter = 0;
 
             collision.transform.SetParent(null);
