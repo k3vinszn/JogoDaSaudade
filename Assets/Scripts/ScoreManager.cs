@@ -14,6 +14,7 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreUI();
         PlayerPrefs.SetInt("Score", score);
         PlayerPrefs.Save();
+        Debug.Log("increase score");
     }
 
     // Function to update the score UI text.

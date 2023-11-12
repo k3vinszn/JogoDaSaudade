@@ -1398,35 +1398,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2827906960317985350, guid: 33798077c2f644740beaa6fcb84b4bba, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.53645873
+      value: 0.24917279
       objectReference: {fileID: 0}
     - target: {fileID: 2827906960317985350, guid: 33798077c2f644740beaa6fcb84b4bba, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.7127574
+      value: 0.8367849
       objectReference: {fileID: 0}
     - target: {fileID: 2827906960317985350, guid: 33798077c2f644740beaa6fcb84b4bba, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.53645873
+      value: 0.24917279
       objectReference: {fileID: 0}
     - target: {fileID: 2827906960317985350, guid: 33798077c2f644740beaa6fcb84b4bba, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.7127574
+      value: 0.8367849
       objectReference: {fileID: 0}
     - target: {fileID: 2827906960317985350, guid: 33798077c2f644740beaa6fcb84b4bba, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 72.6715
+      value: 72.67151
       objectReference: {fileID: 0}
     - target: {fileID: 2827906960317985350, guid: 33798077c2f644740beaa6fcb84b4bba, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 57.618
+      value: 56.61798
       objectReference: {fileID: 0}
     - target: {fileID: 2827906960317985350, guid: 33798077c2f644740beaa6fcb84b4bba, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -422
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 2827906960317985350, guid: 33798077c2f644740beaa6fcb84b4bba, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 98
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 3270694715491027027, guid: 33798077c2f644740beaa6fcb84b4bba, type: 3}
       propertyPath: m_Text
@@ -1474,7 +1474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5213638214829281946, guid: 33798077c2f644740beaa6fcb84b4bba, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6543937916289303166, guid: 33798077c2f644740beaa6fcb84b4bba, type: 3}
       propertyPath: m_Name

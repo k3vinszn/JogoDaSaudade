@@ -48,10 +48,14 @@ public class Anzol : MonoBehaviour
             points += counter;
             textScore.text = ("" + points);
             counter = 0;
-
             collision.transform.SetParent(null);
-
+            
 
         }
+    }
+    private void OnDisable()
+    {
+        PlayerPrefs.SetInt("Score", points);
+        PlayerPrefs.Save();
     }
 }

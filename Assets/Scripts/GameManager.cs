@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    int score;
+    public TextMeshProUGUI text;
+    private void OnEnable()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        score = PlayerPrefs.GetInt("Score");
+        text.text = (" "+score);
     }
 }
